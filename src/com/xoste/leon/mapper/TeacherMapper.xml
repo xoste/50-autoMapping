@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xoste.leon.mapper.TeacherMapper">
+    <select id="selAll" resultType="teacher">
+        select s.sid `listStudent.sid`, s.sname `listStudent.sname`, s.sage `listStudent.sage`, s.tid `listStudent.tid`, t.tid, t.tname from teacher t left join student s on s.tid = t.tid
+    </select>
+</mapper>
